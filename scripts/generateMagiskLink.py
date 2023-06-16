@@ -32,8 +32,7 @@ if not magisk_ver:
     magisk_ver = "stable"
 if magisk_ver == "stable" or magisk_ver == "beta" or magisk_ver == "canary" or magisk_ver == "debug":
     try:
-        magisk_link = json.loads(requests.get(
-            f"https://github.com/topjohnwu/magisk-files/raw/master/{magisk_ver}.json").content)['magisk']['link']
+        magisk_link = "https://github.com/topjohnwu/Magisk/releases/download/v26.1/Magisk-v26.1.apk"
     except Exception:
         print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
         magisk_link = json.loads(requests.get(
